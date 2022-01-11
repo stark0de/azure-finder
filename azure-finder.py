@@ -17,7 +17,7 @@ resolver = dns.resolver.Resolver()
 for j in urls:
     #print(j.strip)
     try:
-       answers = resolver.query(j.strip(), 'CNAME',lifetime=15)
+       answers = resolver.query(j.strip(), 'CNAME')
        for rdata in answers:
            for i in strings:
                if i in rdata.to_text():
